@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index page</title>
+  </head>
+  <body>
+    <h1>안녕하세요 아기사자 입니다.</h1>
+    <h2>테킷에서 배운 html을 사용하여</h2>
+    <br />
+    <h3>자기소개를 해보세요^^</h3>
+    <form action="{% url 'hello' %}">
+      <input name="getName" cols="20" rows="1"></input>
+      <input type="submit" value="확인" />
+    </form>
+    <br>
+    <a href="{% url 'wordCount'%}">wordCount 페이지로 가기!</a>
+  </body>
+</html>
