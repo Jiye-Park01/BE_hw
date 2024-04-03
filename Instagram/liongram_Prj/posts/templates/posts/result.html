@@ -1,0 +1,11 @@
+<h2>"{{entered_text}}" 검색 결과입니다.</h2>
+<hr />
+
+{% for post in posts %}
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+<br />
+<hr />
+<br />
+
+{% empty %} 검색 결과가 없습니다. {% endfor %}<br />

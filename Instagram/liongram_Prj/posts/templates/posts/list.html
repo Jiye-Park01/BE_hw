@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="{% url 'result' %}">
+      <input type="text" name="search" cols="20" rows="2" />
+      <input type="submit" value="검색" />
+    </form>
+
+    {% for post in posts %}
+    <h2>Title: {{post.title}}</h2>
+    <p>content: {{post.content}}</p>
+    <p>View: {{post.views}}</p>
+
+    {% empty %} 작성된 글이 없습니다. {% endfor %}
+  </body>
+</html>
