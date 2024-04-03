@@ -20,5 +20,5 @@ def result(request):
     return render(request, "result.html", {'alltext': entered_text, 'dictionary': word_dictionary.items(), 'count':len(word_list), 'word_num':len(entered_text), 'word_except':len(entered_text)-len(word_list)+1})
 
 def hello(request):
-    entered_name = request.GET['getName']
+    entered_name = request.GET['getName']  
     return render(request, "hello.html", {'name_text': entered_name})

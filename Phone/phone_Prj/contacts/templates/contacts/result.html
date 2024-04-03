@@ -1,0 +1,8 @@
+<h1>"{{alltext}}" - 검색 결과 페이지 입니다</h1>
+<br />
+
+{% for post in name %}
+<h2>이름 : {{ post.name }}</h2>
+<p>전화번호 : {{ post.phone_num }}</p>
+
+{% empty %} 전화번호가 없습니다. {% endfor %}
