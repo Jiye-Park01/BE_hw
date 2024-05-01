@@ -14,8 +14,7 @@ def result(request):
     return render(request, "contacts/result.html", {'posts': posts, 'alltext': entered_text, 'name': name})
 
 class ListView(ListView):
-    model = Post
-    queryset = Post.objects.all().order_by('name')
+    queryset = Post.objects.all().order_by('name')      #쿼리셋 있으면 모델 안써도 됨(무시됨)
     template_name = 'contacts/list.html'
     context_object_name = 'posts'
 
