@@ -6,14 +6,22 @@
     <title>Document</title>
   </head>
   <body>
+    <h2>연락처 실습 메인 페이지</h2>
+    <br>
+    <a href="{% url 'create' %}">새 번호 추가</a>
+    <hr>
+    
+    
+
     <form action="{% url 'result' %}">
       <input type="text" name="name" cols="20" rows="2"></input>
       <input type="submit" value="검색" />
     </form>
     {% for post in posts %}
-    <h2>이름 : {{ post.name }}</h2>
-    <p>전화번호 : {{ post.phone_num }}</p>
+    <p><a href="{% url 'detail' post.id %}">{{ post.name }} - {{ post.phone_num }}</a>
+      <a href="{% url 'update' post.id %}">수정</a>
+    <a href="{% url 'delete' post.id %}">삭제</a></p>
 
-    {% empty %} 작성된 글이 없습니다. {% endfor %}
+    {% empty %}저장된 연락처가 없습니다. {% endfor %}
   </body>
 </html>

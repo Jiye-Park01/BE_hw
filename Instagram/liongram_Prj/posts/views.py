@@ -16,8 +16,8 @@ def result(request):
 #CRUD
 def create(request):
     if request.method == "POST":
-        title = request.POST.get('title')
-        content = request.POST.get('content')
+        title = request.POST.get("title")
+        content = request.POST.get("content")
 
         post = Post.objects.create(
             title = title,

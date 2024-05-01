@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail</title>
+  </head>
+  <body>
+    <h2>연락처 상세 조회</h2>
+    <p>이름: {{ post.name }}</p>
+    <p>전화번호: {{ post.phone_num }}</p>
+    <p>이메일: {{ post.email }}</p>
+    <p>작성일: {{ post.created_at }}</p>
+    <br />
+    <p><a href="{% url 'list' %}">연락처 목록으로 돌아가기</a></p>
+  </body>
+</html>

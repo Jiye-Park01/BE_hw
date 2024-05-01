@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update</title>
+  </head>
+  <body>
+    <h2>연락처 수정</h2>
+    <form method="POST" action="{% url 'update' post.id %}">
+      {% csrf_token %} 이름: <br /><input
+        type="text"
+        value="{{post.name}}"
+        name="name"
+      /><br />
+      번호: <br /><input
+        type="text"
+        value="{{post.phone_num}}"
+        name="phone_num"
+      /><br />
+      이메일: <br /><input
+        type="email"
+        value="{{post.email}}"
+        name="email"
+      /><br /><br />
+      <input type="submit" value="수정" />
+    </form>
+  </body>
+</html>
