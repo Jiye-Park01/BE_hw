@@ -23,7 +23,7 @@ class Like(models.Model):
     post = models.ForeignKey(to = Post, on_delete = models.CASCADE, related_name="post_likes")
     user = models.ForeignKey(to = User, on_delete=models.CASCADE, related_name="user_likes")
     
-class PostCategory(models.Model):
+class PostCategory(models.Model):       #중간테이블 생성
     category = models.ForeignKey(to = Category, on_delete = models.PROTECT, related_name = "categories_postcategory")
     post = models.ForeignKey(to = Post, on_delete= models.CASCADE, related_name = "posts_postcategory")
 
