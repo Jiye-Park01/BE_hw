@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import list, create, detail, update, delete, create_comment
+#from .views import list, create, detail, update, delete, create_comment
 from .views import *
 app_name='blog'
 urlpatterns = [
